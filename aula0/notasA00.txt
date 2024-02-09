@@ -1,0 +1,19 @@
+22 março questões de concurso javascript
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+
+https://javascript.info/
+
+tiagotrojahn@ifsp.edu.br
+
+
+console avalia o retorno de algum valor para a função, então se digitarmos alert("a"); o console fala undefined pois não á retorno definido.
+
+o ; é opcional
+
+console.log("debug");
+-> maneira de fazer debug sem o alert
+
+windows + .  -> escolha de emojis👌👌
+
+crie a variavel e ja atrribua o valor 
