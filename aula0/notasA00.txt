@@ -6,7 +6,6 @@ https://javascript.info/
 
 tiagotrojahn@ifsp.edu.br
 
-
 console avalia o retorno de algum valor para a função, então se digitarmos alert("a"); o console fala undefined pois não á retorno definido.
 
 o ; é opcional
@@ -16,4 +15,21 @@ console.log("debug");
 
 windows + .  -> escolha de emojis👌👌
 
-crie a variavel e ja atrribua o valor 
+crie a variavel e ja atribua o valor 
+
+10 + 10 = 20
+"ifsp" + 10 = "ifsp10"
+"abc" + 10 + 10 = "abc1010"
+10 + 10 +"abc" = "20abc"
+"a" + (10 + 10) = "abc20"
+
+parseInt("10.5") -> 10
+parseFloat("-11.55ab") -> -11.55
+parseFloat("ab1.5") -> NaN  (not a number)
+parseFloat("1..5") -> 1
+
+interpolação ou concatenação de multiplas strings em uma unica mensagem 
+var msg = `olá ${nome}, voce tem ${num + 2} tentativas`;
+essa aspinha torta ai é uma crase
+
+
