@@ -1,0 +1,81 @@
+"1" == 1   -> true
+"1" === 1  -> false
+"1" != 1   -> false
+"1" !== 1  -> true
+
+o == ignora o tipo tentando converter um dos valores para o tipo do outro valor
+
+o === compara primeiramente o tipo, se for diferente ja é diferente
+
+se quiser um comportamento igual as demais linguagens use === ou !== assim evita conversão implicita de tipo 
+
+falsy-> valores considerados falsos quando avaliados como booleanos
+ex: false, 0, -0, NaN,"", null, undefined
+
+truthy -> valores considerados verdadeiros quando avaliados como booleanos
+ex: todo o resto tipo  
+"false", "0"
+
+a regra truthy and falsy funciona p qualquer estrutura que avalia condicionais
+
+onde usar do while? menus onde é esperado um input e depois uma checagem
+
+alert com confirm("aaaa");  -> aparece ok/cancelar
+
+alert com prompt("bbbb","padrão"); -> aparece ok/cancelar
+
+-> estudar os slides p/ analisar esses dois casos muito interessante!!!
+
+-> não usar alerts de nenhum tipo no trabalho lkkkkkk
+
+
+declarando variaveis
+
+var a = "a"; -> escopo global (ou também de função)
+     -> hoisting ou içamento -> a declaração da variavel é     lançada no inicio do codigo e o valor só é atribuido onde ele foi escrito
+ 
+let a = 3000; -> escopo local (de bloco) -> em geral sempre use ele, nunca fique de bizarrice com o var
+
+const a = "Sou inalteravel" -> escopo local (de bloco)
+
+a = true; -> escopo global (não use)
+
+
+
+
+funções anonimas
+var nomeDaFuncao = function(raio){
+	return caiRaio;
+};
+nomeDaFuncao(10.01);
+
+não é içado, apenas a declaração que é
+
+função normal é içada (é declarada e processada antes de ser chamada mesmo que o codigo do conteudo dela esteja depois da chamada)
+
+teste()
+function teste(){
+     console.log("socorro");
+}
+--> isso funciona :)
+
+
+teste2()
+var teste2 = function(){
+     console.log("socorro");
+}
+
+--> isso não funciona :(
+
+é possivel fornecer valores pre definidos para os Parametro das funções
+function teste(msg = "nada"){
+     console.log(msg);
+}
+
+varargs são possiveis com ...nomeDoParametro -> interpretado como array
+
+
+arrow function
+
+
+

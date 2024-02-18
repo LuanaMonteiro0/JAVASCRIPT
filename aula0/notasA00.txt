@@ -13,7 +13,7 @@ o ; é opcional
 console.log("debug");
 -> maneira de fazer debug sem o alert
 
-windows + .  -> escolha de emojis👌👌
+windows + .  -> escolha de emojis👌👌❤️
 
 crie a variavel e ja atribua o valor 
 
