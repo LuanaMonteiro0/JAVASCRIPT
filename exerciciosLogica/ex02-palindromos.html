@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromos</title>
+</head>
+<body>
+    <h1>Recarregue a pagina!</h1>
+    <p>Escreva um programa que verifique se uma palavra 
+        é um palíndromo. Um palíndromo é uma palavra,
+        frase ou sequência de caracteres que permanece a mesma 
+        quando lida de trás para frente.</p>
+    <script>
+        let word = prompt('Digite uma palavra ou frase');
+        let revWord = word.split("").reverse().join("");
+        let  msg = `${word} e ${revWord} `;
+        word===revWord?msg += `são palindromos`: msg += `não são palindromos`;
+        alert(msg);
+    </script>
+</body>
+</html>
