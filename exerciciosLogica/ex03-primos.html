@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números primos</title>
+</head>
+<body>
+    <h1>Recarregue a pagina!</h1>
+    <p>Escreva um programa que receba um número inteiro
+         positivo e determine se ele é um número primo. 
+         Um número primo é aquele que é divisível apenas por 
+         1 e por ele mesmo.</p>
+    <script>
+        let num = prompt("Digite um numero")
+        function isPrime(number){
+            let count = 0
+            for(i=1; i < number; i++){
+                if(number%i == 0){
+                    count++;
+                }
+            }
+            return count > 2? `${number} não é primo`: `${number} é primo`;
+        }    
+        alert(isPrime(num));
+    </script>
+</body>
+</html>
