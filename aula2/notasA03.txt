@@ -21,13 +21,83 @@ typeof(nomeDaVariavel)  -> fornece o tipo da variavel/array
 const para array -> trava o js pra entender que aquela variavel sera sempre um Array
 ainda sim o array pode ser alterado, aumentado ou transformado
 
-maneira de percorrer:
+
+maneiras de percorrer:
+
 for classico com o vetor.length
 for(let i = 0; i < vetor.length; i++)
 
-boa pratica -> use let para declarar o i do for para que o i não exista fora do for
+boa pratica -> use let para declarar o i ou qualquer outra variavel do for para que o i não exista fora do for
+
+forin -> retorna o indice do vetor
+var vetor = ['a', 'b', 'c'];
+for(valor in vetor){
+    console.log(valor); //0, 1, 2
+}
+
+forof -> retorna o conteudo do vetor
+var vetor = ['a', 'b', 'c'];
+for(valor of vetor){
+    console.log(valor); //a, b, c
+}
+
+manipulação de vetores:
+
+implementação de fila no javascript:
+operações:
+entrar na fila (adicionar no fim da fila)
+sair da fila (sai do começo da fila)
+ir para o começo da fila (adicionar no comeco da fila)
+sair da fila (sai do fim da fila)
+
+adicionar no fim da fila
+var vetor = ['a', 'b', 'c'];
+vetor.push("d"); ->adiciona o elemento "d" no fim da lista, retorna o tamanho da lista (podemos usar ou não)
+var vetor = ['a', 'b', 'c', 'd'];
+
+adicionar no comeco da fila
+var vetor = ['a', 'b', 'c'];
+vetor.unshift("d"); ->adiciona o elemento "d" no começo da lista, retorna o tamanho da lista (podemos usar ou não)
+var vetor = ['d', 'a', 'b', 'c'];
+
+arranca do fim da fila
+var vetor = ['a', 'b', 'c'];
+vetor.pop(); ->remove o elemento "c" do fim da lista, retorna o conteudo removido (podemos usar ou não)
+var vetor = ['a', 'b'];
+
+arranca do começo da fila
+var vetor = ['a', 'b', 'c'];
+vetor.shift(); ->remove o elemento "c" do começo da lista, retorna o conteudo removido (podemos usar ou não)
+var vetor = ['b', 'c'];
 
 
+o comando splice:
+
+v = [a, b, c, d, e, f]
+v.splice(2,3); 
+     v = [a, b, f]     v.splice(2,3); retorna [c,d,e]
+
+v.splice(elemento inicial,qtde a ser removida);
+
+-> se retirar um elemento ou nenhum retorna uma lista com um elemento ou lista vazia
+-> se qtd de memoria for maior que a qtd de elementos na lista ele retorna apenas os elementos existentes
+
+v.splice(elemento inicial) -> a partir do elemento inicial vc pega o que tiver na lista
+
+v = [a, b, c, d, e, f]
+v.splice(2, 3, "ifsp");
+     v = [a, b, 'ifsp', f]  v.splice retorna [c, d, f]
+-> na posição inicial indicada o conteudo 'ifsp' sera inserido
+
+v.splice(2, 3, "j", "k", "l", "m");
+     v = [a, b, j, k, l, m, f]  v.splice retorna [c, d, f]
 
 
+v = [a, b, c, d, e, f]
+v.splice(2, 1, "ifsp");
+     v = [a, b, "ifsp", d, e, f]  v.splice retorna [c]
+
+v.splice(2, 0, "ifsp");
+     v = [a, b, "ifsp", c, d, e, f]  v.splice retorna []
+     -> adicionou no meio!
 
