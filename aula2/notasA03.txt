@@ -1,0 +1,33 @@
+arrays ou listas/vetores (é tudo igual pra javascript)
+
+-> armazena varios valores dentro de uma unica variavel 
+
+é util quando se tem uma quantidade desconhecida de valores ou quando há uma quantidade muito grande de
+valores que precisa ser ordenada ou percorrida
+
+como declarar:
+var vetor = Array();
+vetor[0] = "ifsp";
+vetor[1] = 2013;
+ou
+var vetor = Array("ifsp","java", true, 2020, zrray(), 1.5487);
+ou
+var vetor = ["ifsp","java", true, 2020, zrray(),-1.5487];
+
+os arrays de javascript são bichos mutaveis, podem crescer, mudar e se transformar
+
+typeof(nomeDaVariavel)  -> fornece o tipo da variavel/array
+
+const para array -> trava o js pra entender que aquela variavel sera sempre um Array
+ainda sim o array pode ser alterado, aumentado ou transformado
+
+maneira de percorrer:
+for classico com o vetor.length
+for(let i = 0; i < vetor.length; i++)
+
+boa pratica -> use let para declarar o i do for para que o i não exista fora do for
+
+
+
+
+
