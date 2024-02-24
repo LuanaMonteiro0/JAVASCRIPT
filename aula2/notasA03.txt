@@ -101,3 +101,89 @@ v.splice(2, 0, "ifsp");
      v = [a, b, "ifsp", c, d, e, f]  v.splice retorna []
      -> adicionou no meio!
 
+
+o comando slice:
+
+var novoVetor = vetorAntigo.slice();
+    -> copia o vetorAntigo "profundamente" ou um pedaço do vetor vetorAntigo
+
+ 
+ var nome = "luana giovana monteiro";
+
+função split:
+divide a string em partes e gera um array com as strings separadas
+nome.split(" ");
+console.log(nome); -> ["luana", "giovana", "monteiro"];
+
+função join:
+gera um elemento string de qualquer vetor para colar as palavras com o elemento especificado
+novoNome = nome.join("-");
+console.log(novoNome); -> "luana-giovana-monteiro";
+
+vetor.includes(elemento) -> true ou false se existe o elemento no vetor
+
+vetor = [a, d, j, a]
+vetor.indexOf(elemento) -> elemento = a  -> 0
+vetor.lastIndexOf(elemento) -> elemento = a -> 3
+
+vetor.reverse() -> reverte a ordem dos elementos do array
+
+vetor.sort() -> ordena todo mundo !!!!!!!!!!!!alfabeticamente!!!!!!!!!!
+     -> ai quero fazer ordenação numerica ou qualquer outra ordenação olha qual que é a função
+        que deve ser usada com o sort pra fazer a ordenação
+
+
+função map 
+modifica os elementos de uma lista retornando uma nova lista de mesmo tamanho 
+função soma(elemento){
+    return elemento + 1
+}
+vetor = [1, 2, 3];
+vetordois = vetor.map(soma);
+console.log(vetordois); -> [2, 3, 4]
+
+a função map espera que o primeiro elemento passado seja o elemento do array origem
+o segundo elemento passado seja o indice do array
+o terceiro elemento passado seja uma copia do array de entrada
+no exemplo a copia deve ser do array chamado "vetor" 
+
+
+
+função filter -> o mais usado de todos
+remove os elementos atravez de um filtro
+não altera os elementos, apenas exclui os elementos de acordo um uma função de filtragem
+
+a função que filter espera é boleana
+
+function filtra(elemento){
+    return elemento > 1? true : false;
+}
+vetor = [-1, -2, 3, 5];
+vetordois = vetor.filter(filtra);
+console.log(vetordois); -> [3, 5]
+
+
+a função filter espera que o primeiro elemento seja o elemento do array origem
+o segundo elemento é o indice do array
+o terceiro é o proprio array (como no map)
+
+diferença primordial: o filter espera obrigatoriamente que a função tenha retorno boleano.
+
+
+
+função reduce -> é o menos usado dos 3 pq é uma faca de cinco gumes
+obtem um unico valor da lista calculado sobre a lista em sua totalidade
+
+tem dois atributos obrigatorios e tres opcionais
+
+function somatorio(acc, val){
+    return acc + val;
+}
+valores = [1, 2, 3, 4, 5, 6];
+resultado = valores.reduce(somatorio);
+console.log(resultado); -> 21
+
+
+não use filter, map ou reduce em qualquer vetor muito grande (+1000 elementos)
+ ou com qualquer elemento undefined
+
