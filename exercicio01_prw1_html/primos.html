@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function primos(qtde) {
+        let isPrime = function(nros){
+            let count = 0;
+            for(let i = 1; i <= nros; i++){
+                if(nros % i === 0){
+                    count++;
+                }
+            }
+            return count > 2? false : true;
+        }
+    
+        var vetor = [];
+        let nros = 1;
+        while(qtde > 0){
+            if(isPrime(nros)){
+                vetor.push(nros)
+                qtde--;
+            }
+            nros++;
+        }
+        return vetor;
+    }
+    console.log(primos(5))
+    </script>
+</body>
+</html>
