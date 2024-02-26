@@ -38,11 +38,38 @@ function palindromo(palavras) {
 // Em geral, a margem de segurança entre dois aviões é de 1000 pés.
 // Cada pé é igual a 0.3048 metros.
 function perigoAcidente(altura_pes_aviao1, altura_met_aviao2) {
+    pe_avi2 = altura_met_aviao2 / 0.3048;
+    if (pe_avi2 >= 0 && altura_pes_aviao1 >= 0 || pe_avi2 < 0 && altura_pes_aviao1 <0){
+        dist = Math.abs(pe_avi2 - altura_pes_aviao1);
+        if (dist >= 1000){
+            return false;
+        }
+        return true;
+    }else{
+        dist = Math.abs(pe_avi2) + Math.abs(altura_pes_aviao1);
+        if (dist >= 1000){
+            return false;
+        }
+        return true;
+    }    
 
 }
 
 // Função que retorna uma lista sem nenhum item duplicado.
 function apenasUnicos(lista) {
+    
+    let removeRepeat = function(e, ind, lista){
+        let count = 0;
+        for (let i = 0; i < lista.length; i++){
+            if(e === lista[i]){
+                count++;
+            }
+        }
+        return count >= 2? false:true;
+    }
+
+    let listaUnica = lista.filter(removeRepeat);
+    return listaUnica;
 
 }
 
