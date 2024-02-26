@@ -135,13 +135,49 @@ function diff(v1, v2) {
 // Recebe duas listas numéricas e retorna o vetor cuja soma dos valores é maior que a outra lista. Caso ambas as listas tenham mesmo valor, retorna FALSE. Considere vetor vazio com soma zero.
 // Deve ser implementada usando map/filter/reduce
 function maior(v1, v2) {
+    function sum(acc, val){
+        return acc + val;
+    }
 
+    let var1 = 0
+    let var2 = 0
+    if(v1.length === 0){
+        var1 = 0
+    }else{
+        var1 = v1.reduce(sum);
+    }
+
+    if(v2.length === 0){
+        var2 = 0
+    }else{
+        var2 = v2.reduce(sum);
+    }
+    
+
+    if(var1 > var2){
+        return v1
+    }else{
+        if (var1 < var2){
+            return v2
+        }
+        return false;
+    }
+    
+ 
 }
 
 // Recebe um valor e uma lista. Retorna a lista sem nenhuma ocorrência do valor de entrada.
 // Deve ser implementada usando map/filter/reduce
 function removeValores(valor, lista) {
-
+    function getValor(val){
+        if(valor === val){
+            return false;
+        }
+        return true;
+    }
+    let listaFinal = [];
+    listaFinal = lista.filter(getValor);
+    return listaFinal;
 }
 
 module.exports = { primos, palindromo, perigoAcidente, apenasUnicos, somaNumerosPares, dobro, uniao, diff, maior, removeValores }
