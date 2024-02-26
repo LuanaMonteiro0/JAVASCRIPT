@@ -59,13 +59,12 @@ function perigoAcidente(altura_pes_aviao1, altura_met_aviao2) {
 function apenasUnicos(lista) {
     
     let removeRepeat = function(e, ind, lista){
-        let count = 0;
         for (let i = 0; i < lista.length; i++){
-            if(e === lista[i]){
-                count++;
+            if(e === lista[i] && ind !== i){
+                return false;
             }
         }
-        return count >= 2? false:true;
+        return true;
     }
 
     let listaUnica = lista.filter(removeRepeat);
