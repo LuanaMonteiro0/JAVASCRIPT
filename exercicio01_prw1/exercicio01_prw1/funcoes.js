@@ -1,4 +1,5 @@
 // Retorna uma lista com os "qtde" primeiros números primos, começando em 1.
+
 function primos(qtde) {
     let isPrime = function(nros){
         let count = 0;
@@ -9,7 +10,7 @@ function primos(qtde) {
         }
         return count > 2? false : true;
     }
-
+    
     var vetor = [];
     let nros = 1;
     while(qtde > 0){
@@ -21,6 +22,7 @@ function primos(qtde) {
     }
     return vetor;
 }
+
 
 // Retorna a lista de palavras palíndromas
 // Deve ser implementada usando map/filter/reduce
@@ -52,12 +54,10 @@ function perigoAcidente(altura_pes_aviao1, altura_met_aviao2) {
         }
         return true;
     }    
-
 }
 
 // Função que retorna uma lista sem nenhum item duplicado.
 function apenasUnicos(lista) {
-    
     let removeRepeat = function(e, ind, lista){
         for (let i = 0; i < lista.length; i++){
             if(e === lista[i] && ind !== i){
@@ -69,7 +69,6 @@ function apenasUnicos(lista) {
 
     let listaUnica = lista.filter(removeRepeat);
     return listaUnica;
-
 }
 
 // Retorna a soma dos "qtde" primeiros números pares (zero é um número par!)
@@ -81,7 +80,6 @@ function somaNumerosPares(qtde) {
         par += 2;
     }
     return sum;
-
 }
 
 // Recebe uma lista numérica e retorna uma lista cujos valores foram multiplicados por 2.
@@ -93,33 +91,45 @@ function dobro(valores) {
 
     let listaMultiply = valores.map(multiply);
     return listaMultiply;
-
 }
-
 // Recebe duas listas e retorna uma lista com a união das listas de entrada, sem repetições.
 function uniao(v1, v2) {
-    let listaUniao = v1.slice();
-    
-    for (let i = 0; i < listaUniao.length; i++){
-        let flag = false;
-        let elem;
-        for(let j = 0; j < v2.length; j++){
-            elem = v2[j];
-            if(listaUniao[i]=== v2[j]){
-                flag = true;
+   let listaUniao = [];
+
+   function elementInList(l){
+        for(let i = 0; i < l.length; i++) {
+            let flag = false;
+            for (let j = 0; j < listaUniao.length;j++) {
+                if(l[i] === listaUniao[j]){
+                    flag = true;
+                }
+            }
+            if (flag === false){
+                listaUniao.push(l[i]);
             }
         }
-        if(!flag){
-            listaUniao.push(elem);
-        }
-    }
-        
-    return listaUniao;
+   }
+   elementInList(v1)
+   elementInList(v2)
+   return listaUniao;
+   
 }
 
 // Função que recebe duas listas e retorna os elementos da primeira lista que não estejam na segunda lista.
 function diff(v1, v2) {
-
+    let listaDiff = [];
+    for(valor of v1){
+        let flag = false;
+        for(valor2 of v2){
+            if(valor=== valor2){
+                flag = true;
+            }
+        }
+        if(flag === false){
+            listaDiff.push(valor);
+        }
+    }
+    return listaDiff;
 }
 
 // Recebe duas listas numéricas e retorna o vetor cuja soma dos valores é maior que a outra lista. Caso ambas as listas tenham mesmo valor, retorna FALSE. Considere vetor vazio com soma zero.
