@@ -74,18 +74,47 @@ function apenasUnicos(lista) {
 
 // Retorna a soma dos "qtde" primeiros números pares (zero é um número par!)
 function somaNumerosPares(qtde) {
+    sum = 0
+    par = 0
+    for (var i = 0; i < qtde; i++) {
+        sum += par;
+        par += 2;
+    }
+    return sum;
 
 }
 
 // Recebe uma lista numérica e retorna uma lista cujos valores foram multiplicados por 2.
 // Deve ser implementada usando map/filter/reduce
 function dobro(valores) {
+    function multiply(val){
+        return val * 2
+    }
+
+    let listaMultiply = valores.map(multiply);
+    return listaMultiply;
 
 }
 
 // Recebe duas listas e retorna uma lista com a união das listas de entrada, sem repetições.
 function uniao(v1, v2) {
-
+    let listaUniao = v1.slice();
+    
+    for (let i = 0; i < listaUniao.length; i++){
+        let flag = false;
+        let elem;
+        for(let j = 0; j < v2.length; j++){
+            elem = v2[j];
+            if(listaUniao[i]=== v2[j]){
+                flag = true;
+            }
+        }
+        if(!flag){
+            listaUniao.push(elem);
+        }
+    }
+        
+    return listaUniao;
 }
 
 // Função que recebe duas listas e retorna os elementos da primeira lista que não estejam na segunda lista.
