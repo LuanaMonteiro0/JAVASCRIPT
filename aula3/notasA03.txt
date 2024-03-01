@@ -1,0 +1,57 @@
+javaScript em desenvolvimento de websites
+
+a parte mais legal do javascript  =D
+
+4 partes do site que precisam ser conhecidas:
+ 
+  1 - encontrar/selecionar um elemento na pagina
+
+  2 - detectar um evento do usuario em um elemento da pagina
+
+  3 - adicionar, remover ou modificar um elemento da pagina
+
+  4 - unir os topicos acima em um unico código fonte 
+
+
+1 - dificudade: como fazer a associação do html com o javascript?
+o usuario interagem com o html mas quem realmente faz as coisas é o javaScript
+
+5 operações que devem ser decoradas
+funções antigas:
+document.getElementById("seletor");  -> não deve haver mais de um elemento com o msm id
+document.getElementsByTagName("seletor");
+document.getElementsByClassName("seletor"); -> retorna todos os elementos que tenham a classe (não importa se houverem mais classes)
+
+funções modernas:
+document.querySelector("seletor css");  -> primeiro elemento que atenda o seletor css
+document.querySelectorAll("seletor css");  -> lista de elementos que atenda o seletor css
+
+essas funções apontam para variaveis que contém o elemento
+
+document -> é uma referencia ao site, como se você pudesse selecionar todo o site em uma variavel só
+window -> aba -> manipulação da aba, troca de endereço, operações que se faz com a aba (tem haver com navegação)
+
+
+um site/uma aba não sabe se tem outros sites/ outras abas
+
+a alteração nas variaveis que referem um elemento html refletem "automaticamente" no elemento hmtl em si
+
+
+o que será selecionado (exemplo)
+1 - B
+2 - [B, C]
+3 - [todos]
+4 - [B]
+5 - E
+6 - A
+7 - [B, C]
+8 - C  (?)
+9 - D
+10 - C
+
+REVISAR SELETORES CSS  -> tecnologia predominante
+
+
+
+
+
