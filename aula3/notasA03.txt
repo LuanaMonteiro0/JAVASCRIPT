@@ -40,16 +40,39 @@ a alteração nas variaveis que referem um elemento html refletem "automaticamen
 o que será selecionado (exemplo)
 1 - B
 2 - [B, C]
-3 - [todos]
+3 - [A, B, C, D, E, F]
 4 - [B]
 5 - E
 6 - A
 7 - [B, C]
-8 - C  (?)
-9 - D
+8 - C  (?) ok!
+9 - D  -> como pega um elemento especifico (indice [3]) ele retorna apenas um elemento e não a lista
 10 - C
 
 REVISAR SELETORES CSS  -> tecnologia predominante
+https://flukeout.github.io/
+
+seletor css (attrib selector):
+[class] -> todos os elementos que possuam o elemento class
+[class=azul] -> todos os elementos que possuam o class com o valor unica e exclusivamente igual a azul
+
+em todas as funções de seleção de multiplos elementos podem ser usadas as posições dos itens para selecionar 
+apenas um dos elementos
+
+recomendação: usar sempre o querySelector e o querySelectorAll
+
+seletor hierarquico 
+parte da ideia de uma arvore DOM (a arvore genealogica do html)
+
+comandos que selecionam os atributos esses atributos:
+parentElement
+nextElementSibling
+previousElementSibling
+children
+todo elemento html tem esses elementos
+
+
+let variavel = document.querySelector(a).children
 
 
 

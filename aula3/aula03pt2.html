@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div>
+                    <button>ORIGEM</button>
+                </div>
+            </article>
+        </section>
+        <section>
+
+        </section>
+        <section>
+            elemento que desejo selecionar
+        </section>
+    </main>
+    <script>
+        let imprimir = document.querySelector("button").parentElement.parentElement.parentElement.nextElementSibling.nextElementSibling;
+        console.log(imprimir);
+    
+        let x = document.querySelector("button");
+        for(let i=0; i<3; i++) {
+            x = x.parentElement;
+        }
+        for(let i=0; i<2; i++) {
+            x = x.nextElementSibling;
+        }
+        console.log(x);
+
+    
+    </script>
+</body>
+</html>
