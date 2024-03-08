@@ -18,6 +18,24 @@ javascript tem uma
 
 cada arquivo cuida da sua propria vida assim permite a separação dos interesses das paginas
 
-usar eventListener
+usar addEventListener
 -> o segundo parametro do event listener é uma referencia para a função 
     e não a função em si (com parenteses () junto ) é só o nome dele 
+
+o eventListener sempre tem prioridade por idade, havendo dois eventlistener o primeiro é executado e
+ao final da função do primeiro o segundo é executado, sempre nessa ordem
+
+
+removeEventListener
+-> el.removeEventListener("refEvento", refFunção) -> apaga a determida função de determinado evento do elemento
+    el.removeEventListener() -> remove todos os eventListeners
+
+propagação de evento
+ao clicar em um botão afeta os pais e avos até a tag html 
+ou seja, um eventListener pode desencadear outros eventos se houverem
+
+e.stopPropagation(); -> mata a propagação de eventos 
+
+o onclick também propaga no html (não use o onclick)
+
+recomendação: stopPropagation em todos os eventos 

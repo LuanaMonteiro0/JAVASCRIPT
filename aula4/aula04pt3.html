@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://www.google.com">ir ao google</a><br>
+    <button>Comprar</button>
+    <input type="text" name="conteudo">
+    <div id="resultado">
+        <ul>
+            <li><span>1</span><button>faz</button></li>
+            <li><span>2</span><button>faz</button></li>
+            <li><span>3</span><button>faz</button></li>
+            <li><span>4</span><button>faz</button></li>
+            <li><span>5</span><button>faz</button></li>
+            <li><span>6</span><button>faz</button></li>
+        </ul>
+    </div>
+    <script>
+        function dizerOla(e) {
+            let alvo = e.target.previousElementSibling.innerHTML;
+        
+            console.log(alvo);
+        }
+        let btns = document.querySelectorAll("button");
+        for (let btn of btns) {
+            btn.addEventListener("click", dizerOla);
+        }
+
+        let a = document.querySelector("a");
+        a.addEventListener("click", (e) => {
+            console.log("eu vou pro google");
+            e.preventDefault(); //impede comportamento padrão da que o navegador dispara para a tag
+            //evitar o acionamento do evento padrão da tag 
+        });
+
+    </script>
+</body>
+
+</html>
