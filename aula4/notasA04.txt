@@ -1,0 +1,23 @@
+aula passada - seletores de elementos 
+
+call back - gatilhos que acontecem 
+-> são chamadas  "avisos" pros elementos 
+
+em frameworks avançados permitem que se crie seus proprios eventos
+
+existem muitos eventos 
+
+evite todos os atributos com prefixo "on" pois eles referenciam as funções
+quebrando os pilares da programação web
+
+tres pilares: 
+paginas separadas 
+html tem uma 
+css tem uma 
+javascript tem uma 
+
+cada arquivo cuida da sua propria vida assim permite a separação dos interesses das paginas
+
+usar eventListener
+-> o segundo parametro do event listener é uma referencia para a função 
+    e não a função em si (com parenteses () junto ) é só o nome dele 

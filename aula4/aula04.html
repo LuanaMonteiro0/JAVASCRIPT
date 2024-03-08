@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">fazer algo um </button>
+    <button>comprar</button>
+    <button>vender</button>
+    <button>trocar</button>
+    <button>emprestar</button>
+    <button>sumir</button>
+
+    <input type="text" name = "conteudo">
+    <div id="resultado"></div>
+
+    <script>
+        function dizerOla() {
+            alert("oláa");
+        }
+        let btn = document.querySelector("#btn1");
+        btn.addEventListener("click", dizerOla);
+        btn.addEventListener("mouseover", dizerOla);
+        //assim passamos multiplos eventos que desencadeiam a mesma reação (função)
+
+
+        //declarando função anonima / função arrow no eventListener 
+        //problema: a função sera carregada toda vez que o codigo é acionado
+        //se o codigo for acionado multiplas vezes o site fica leeeeeeeento
+
+        //btn.addEventListener("click", function(){alert("Hello!")});
+        //btn.addEventListener("click", () => {alert("hola!")});
+
+
+        //detectando elemento que invocou a função
+        function dizertchau(e) {
+            let alvo = e.target;
+            console.log(alvo);
+            console.log(e.type);
+            alert("tchau");
+        }
+        
+        let btns = document.querySelectorAll("button");
+        for (let bts of btns){
+            bts.addEventListener("click", dizertchau);
+        }
+
+    </script>
+</body>
+</html>
