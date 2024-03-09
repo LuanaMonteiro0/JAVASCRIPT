@@ -39,3 +39,35 @@ e.stopPropagation(); -> mata a propagação de eventos
 o onclick também propaga no html (não use o onclick)
 
 recomendação: stopPropagation em todos os eventos 
+
+
+parte 3 adicionando e desaparecendo com os elementos
+
+.innerText -> retorna a string com o conteudo textual do elemento
+
+.innerHTML -> retorna o codigo html que esta dentro da tag
+
+para tag input
+.value  -> pega o que o usuario digitou, preencheu, marcou etc
+
+.getAttribute -> pega o valor do atributo passado como parametro
+.setAttribute -> seta o valor do atributo que foi passado como parametro
+
+atributo class
+classList.add() -> adiciona nas classes
+classList.remove() -> apaga das classes
+classList.replace() -> substitui uma classe pela outra
+classList.contains() -> verifica se esta nas classes
+
+
+novo elemento dentro de um antigo
+let div = document.querySelector("div")
+let novo = document.createElement(Tag HTML)
+novo.innerText = "paragrafo"
+
+div.append(novo)  -> adiciona como ultimo filho na tag div
+
+
+elemento.remove(); ->apaga o elemento, se tiver filhos mata eles também
+
+para alterar o css usar a abordagem da troca e colocação de classes
