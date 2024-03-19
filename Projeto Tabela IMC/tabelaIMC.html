@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <table id="tabela">
-        <thead>
-            <th> Nome </th>
-            <th> Peso </th>
-            <th> Altura </th>
-            <th> IMC </th>
-            <th> Status </th>
-            <th> Opções </th>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
+    <div class = "content-center">
+        <table id="tabela">
+            <thead>
+                <th> Nome </th>
+                <th> Peso </th>
+                <th> Altura </th>
+                <th> IMC </th>
+                <th> Status </th>
+                <th> Opções </th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+        <form id = "formulario">
     
-    <form action>
-        <input id= "nome" type="text" name="nome" placeholder="Digite o nome aqui" required>
-        <input id = "peso" type="number" name="peso" placeholder="Digite o peso aqui" required>
-        <input id = "altura" type="number" name="altura" placeholder="Digite a altura aqui" required>
-        <button id = "enviar">Enviar</button>
-    </form>
+            <input id= "nome" type="text" name="nome" placeholder="Digite o nome aqui" required>
+         
+            <input id = "peso" type="number" name="peso" placeholder="Digite o peso aqui" required>
+         
+            <input id = "altura" type="number" name="altura" placeholder="Digite a altura aqui" required>
 
-    <button id = "removeMaiorIMC">Remover Maior IMC</button>
-    <button id = "removeMenorIMC">Remover Menor IMC</button>
+            <button id = "enviar">Enviar</button>
+        </form>
+
+        <button id = "removeMaiorIMC">Remover Maior IMC</button>
+        
+        <button id = "removeMenorIMC">Remover Menor IMC</button>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
